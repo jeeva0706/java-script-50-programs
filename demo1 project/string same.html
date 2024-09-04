@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>two string same after Reverse</title>
+</head>
+
+<body>
+
+    <p id="demo1"></p>
+
+    <script>
+
+        function myarr(str1, str2) {
+
+            const reverseStr1 = str1.split('').reverse().join('');
+            const reverseStr2 = str2.split('').reverse().join('');
+
+
+            return reverseStr1 == reverseStr2;
+        }
+
+        const string1 = "hello";
+        const string2 = "jeeva";
+
+        if (myarr(string1, string2)) {
+            document.getElementById("demo1").innerHTML = "The strings are the same after being reversed.";
+        } else {
+            document.getElementById("demo1").innerHTML = "The strings are different after being reversed.";
+        }
+
+
+    </script>
+
+</body>
+
+</html>

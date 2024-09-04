@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rupess demonisation</title>
+</head>
+
+<body>
+
+
+
+    <h2>write a code for Rupees denomination for user input value [1,2,5,10,20,50,100,200,500,2000]</h2>
+
+    <script>
+
+        function call(amount) {
+            const denominations = [2000, 500, 200, 100, 50, 20, 10, 5, 2, 1];
+            const result = {};
+
+            for (let i = 0; i < denominations.length; i++) {
+                const denomination = denominations[i];
+                if (amount >= denomination) {
+                    result[denomination] = Math.floor(amount / denomination);
+                    amount = amount % denomination;
+                }
+            }
+
+            return result;
+        }
+
+
+        const amount = parseInt(prompt("Enter the amount in Rupees: "), 10);
+        const denominationsResult = call(amount);
+
+        console.log(`For the amount of Rs. ${amount}, you will need:`);
+        for (let denomination in denominationsResult) {
+            console.log(`${denominationsResult[denomination]} notes of Rs. ${denomination}`);
+        }
+
+    </script>
+
+
+</body>
+
+</html>

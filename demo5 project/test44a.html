@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>44.	input : 4
+        output: 
+                    1
+                1	2	1
+            1	2	3	2	1
+        2	4	6	8	6	4	2
+            1	2	3	2	1
+                1	2	1
+                    1
+        </h2>
+
+    <script>
+
+        function generatePattern(n) {
+            let result = "";
+
+            // Top half including the middle row
+            for (let i = 1; i <= n; i++) {
+                // Adding leading spaces
+                result += " ".repeat((n - i) * 2);
+
+                // Adding increasing numbers
+                for (let j = 1; j < i; j++) {
+                    result += j + "\t";
+                }
+
+                // Adding decreasing numbers
+                for (let j = i - 1; j >= 1; j--) {
+                    result += j + "\t";
+                }
+
+                result += "\n"; // Newline after each row
+            }
+
+            // Middle row with multiples of 2
+            for (let i = 2; i <= 2 * n; i += 2) {
+                result += i + "\t";
+            }
+            for (let i = 2 * (n - 1); i >= 2; i -= 2) {
+                result += i + "\t";
+            }
+            result += "\n";
+
+            // Bottom half excluding the middle row
+            for (let i = n - 1; i >= 1; i--) {
+                // Adding leading spaces
+                result += " ".repeat((n - i) * 2);
+
+                // Adding increasing numbers
+                for (let j = 1; j < i; j++) {
+                    result += j + "\t";
+                }
+
+                // Adding decreasing numbers
+                for (let j = i - 1; j >= 1; j--) {
+                    result += j + "\t";
+                }
+
+                result += "\n"; // Newline after each row
+            }
+
+            console.log(result);
+        }
+
+        // Example usage
+        generatePattern(4);
+
+
+    </script>
+
+</body>
+
+</html>

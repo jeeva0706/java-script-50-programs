@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>31.	JavaScript Program to Get File Extension</h2>
+
+    <p id="demo"></p>
+    <input type="file" id="files">
+
+    <button onclick="filelist()">File Extension</button>
+
+
+    <script>
+
+        function filelist() {
+            let file = document.getElementById("files").value;
+
+            let keys = file.split(".");
+
+            let words = keys[1];
+
+            document.getElementById("demo").innerHTML = words;
+
+        }
+
+    </script>
+
+</body>
+
+</html>

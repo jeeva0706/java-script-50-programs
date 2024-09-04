@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <h2>6.	Write the code given If two strings are anagrams of one another, then return true.</h2>
+
+<script>
+
+function Compare(str1, str2){
+    if (str1.length !== str2.length) {
+       return false
+    }
+ 
+   return str1.toLowerCase().split("").sort().join("") === str2.toLowerCase().split("").sort().join("")
+}
+
+console.log(Compare("Listen", "Silent")) //true
+console.log(Compare("Mary", "arms")) //false
+
+</script>
+
+</body>
+</html>

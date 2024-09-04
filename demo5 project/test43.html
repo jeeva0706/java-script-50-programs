@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>43.	input : 3
+        output:
+                    1
+                1	2	1
+            1	2	3	2	1
+        1	2	3	4	3	2	1
+            1	2	3	2	1
+                1	2	1
+                    1
+        </h2>
+
+        <script>
+
+function generatePattern(n) {
+    let result = "";
+
+    // Top half including the middle row
+    for (let i = 1; i <= n + 1; i++) {
+        // Adding leading spaces
+        result += " ".repeat((n - i + 1) * 2);
+        
+        // Adding increasing numbers
+        for (let j = 1; j < i; j++) {
+            result += j + "\t";
+        }
+
+        // Adding decreasing numbers
+        for (let j = i - 2; j >= 1; j--) {
+            result += j + "\t";
+        }
+
+        result += "\n"; // Newline after each row
+    }
+
+    // Bottom half excluding the middle row
+    for (let i = n; i >= 1; i--) {
+        // Adding leading spaces
+        result += " ".repeat((n - i + 1) * 2);
+        
+        // Adding increasing numbers
+        for (let j = 1; j < i; j++) {
+            result += j + "\t";
+        }
+
+        // Adding decreasing numbers
+        for (let j = i - 2; j >= 1; j--) {
+            result += j + "\t";
+        }
+
+        result += "\n"; // Newline after each row
+    }
+
+    console.log(result);
+}
+
+// Example usage
+generatePattern(3);
+
+
+        </script>
+
+</body>
+</html>

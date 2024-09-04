@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INCREASE ANS DECREASE</title>
+</head>
+
+<body>
+
+    <p id="demo"></p>
+
+    <h2>6. Increase or decrease value using on click button from user input value</h2>
+
+    <button onclick="decrement()">-</BUtton>
+    <BUtton onclick="increment()">+</BUtton>
+
+    <script>
+        let value = 0;
+
+        function increment() {
+            value += 1;
+            document.getElementById("demo").innerHTML = value;
+        }
+        function decrement() {
+            value -= 1;
+            document.getElementById("demo").innerHTML = value;
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

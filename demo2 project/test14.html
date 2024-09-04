@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>14.	 get distinct characters and their count in a string ?</h2>
+
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <script>
+
+        const str1 = "jack jeeva is instagram id is high leavel fan base social media";
+
+        let resultvalue = str1.replace(/i/g, '');
+
+        document.getElementById("demo3").innerHTML = resultvalue;
+
+        let iCount = (str1.match(/i/g)  || []).length;
+
+        document.getElementById("demo4").innerHTML = iCount;
+
+
+    </script>
+
+</body>
+</html>
+

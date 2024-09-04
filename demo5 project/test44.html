@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Problem-1: Create a small calculator which performs operations such as Addition, Subtraction, Multiplication and Division using class.
+        Calculator inputs :> ‘a’, ‘b’ and ‘type of operation’
+        Datatype :> ‘a’ = double, ‘b’ = double, ‘type of operation’ = string
+    </h2>
+
+
+    <script>
+
+        class calculator {
+            constructor(value1, value2, answer) {
+                this.value1 = value1;
+                this.value2 = value2;
+                this.answer = answer;
+            }
+            calculate() {
+                switch(this.answer){
+                case "add":
+                    return this.add();
+                case "sub":
+                    return this.sub();  
+                case "mul":
+                    return this.mul();
+                case "div":
+                    return this.div();  
+                default: 
+                    return "opeartion invalid";      
+                }
+            }
+                add() {
+                    return this.value1 + this.value2 ;
+                }
+                sub() {
+                    return this.value1 - this.value2 ;
+                }
+                mul() {
+                    return this.value1 * this.value2 ;
+                }
+                div() {
+                    return this.value1 / this.value2 ;
+                  }
+        }
+
+        let calc1 = new calculator(10, 5, 'add');
+        console.log(calc1.calculate());
+
+        let calc2 = new calculator(5, 5, 'sub');
+        console.log(calc2.calculate());
+
+        let calc3 = new calculator(5, 5, 'mul');
+        console.log(calc3.calculate());
+
+        let calc4 = new calculator(5, 5, 'div');
+        console.log(calc4.calculate());
+
+
+    </script>
+
+</body>
+</html>
+

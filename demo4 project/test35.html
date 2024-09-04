@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>35.	JavaScript Program to Generate a Range of Numbers and Characters.</h2>
+
+    <script>
+
+        // Function to generate a range of numbers
+        function generateNumberRange(start, end) {
+            let range = [];
+            for (let i = start; i <= end; i++) {
+                range.push(i);
+            }
+            return range;
+        }
+
+        // Function to generate a range of characters
+        function generateCharRange(startChar, endChar) {
+            let range = [];
+            let start = startChar.charCodeAt(0);
+            let end = endChar.charCodeAt(0);
+
+            for (let i = start; i <= end; i++) {
+                range.push(String.fromCharCode(i));
+            }
+            return range;
+        }
+
+        
+
+
+        let numberRange = generateNumberRange(10, 50);
+        document.write("\n Number Range:", numberRange);
+
+
+        let charRange = generateCharRange('a', 'f');
+        document.write("\n Character Range:", charRange);
+
+
+        let uppercaseRange = generateCharRange('A', 'Z');
+        document.write("\n Uppercase Range:", uppercaseRange);
+
+
+    </script>
+
+</body>
+
+</html>

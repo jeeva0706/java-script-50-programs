@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<h2>42.	input: 1
+    output :
+            1
+        2	4	2
+            1
+    </h2>
+
+    <script>
+
+function printPattern() {
+    let n = 3; // Number of rows and columns 
+    
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = 1; j <= n; j++) {
+            if (i === 1 || i === n) {
+                
+                if (j === Math.ceil(n / 2)) {
+                    row += "1\t";
+                } else {
+                    row += "\t"; // Empty spaces
+                }
+            } else {
+                
+                if (j === 1 || j === n) {
+                    row += "2\t";
+                } else {
+                    row += "4\t";
+                }
+            }
+        }
+        console.log(row);
+    }
+}
+
+printPattern();
+
+
+    </script>
+
+</body>
+</html>

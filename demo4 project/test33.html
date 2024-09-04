@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .main {
+            width: 20%;
+            display: none;
+            background-color: aqua;
+            text-align: center;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h2>33.	Write a code to display section when a positive radio button selected</h2>
+
+    <div class="main" id="datas">
+
+        <h1>communication skills</h1>
+
+        <h3>OK BYE</h3>
+
+    </div>
+
+    
+
+    <input type="radio" id="positive" name="fav_language" value="positive" class="main1" onclick="myfunction1()">
+    <label for="from1">POSITIVE</label><br><br>
+
+
+    <input type="radio" id="negative" name="fav_language" value="negative" class="main2" onclick="myfunction2()">
+    <label for="from2">NEGATIVE</label><br>
+    <p id="demo1"></p>
+
+
+
+    <script>
+
+        let positivenegative = document.getElementById("datas");
+        let positive = document.getElementById("positive");
+        let negative = document.getElementById("negative");
+
+        function myfunction1() {
+
+            if (positive.checked) {
+                document.getElementById("datas").style.display = "block";
+            }
+        }
+
+        function myfunction2() {
+
+            if (negative.checked) {
+                document.getElementById("datas").style.display = "none";
+            }
+        }
+        
+    </script>
+
+</body>
+
+</html>

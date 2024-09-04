@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>34.	Write a code to select min-2 options and max-5 option from given checkbox input</h2>
+
+    <form id="formsdata">
+
+        <input type="checkbox" id="tamil" name="subvalue" value="Bike">
+        <label for="tamil"> tamil</label><br>
+
+        <input type="checkbox" id="english" name="subvalue" value="Car">
+        <label for="english"> english</label><br>
+
+        <input type="checkbox" id="maths" name="subvalue" value="Boat">
+        <label for="maths"> maths</label><br>
+
+        <input type="checkbox" id="science" name="subvalue" value="Bike">
+        <label for="science"> science</label><br>
+
+        <input type="checkbox" id="social" name="subvalue" value="Car">
+        <label for="social"> social</label><br>
+
+        <input type="checkbox" id="computer" name="subvalue" value="Boat">
+        <label for="computer"> computer</label><br>
+
+        <input type="checkbox" id="chemictry" name="subvalue" value="Bike">
+        <label for="chemistry"> chemistry</label><br>
+
+        <input type="checkbox" id="physics" name="subvalue" value="Car">
+        <label for="physics"> physics</label><br>
+
+        <input type="checkbox" id="commerce" name="subvalue" value="Boat">
+        <label for="commerce"> commerce</label><br>
+
+        <input type="checkbox" id="ecanomics" name="subvalue" value="Boat">
+        <label for="ecanomics"> ecanomics</label><br>
+
+        <p id="errormessage" style="color:red;"></p>
+
+        <button type="button" onclick="validation()">Submit</button>
+
+    </form>
+
+
+    <script>
+
+        function validation() {
+
+        var selectedCheckboxes = document.querySelectorAll('input[name=subvalue]:checked');
+        const errormessage = document.getElementById("errormessage");
+
+            
+            if (selectedCheckboxes.length < 2) {
+              document.getElementById("errormessage").innerHTML = "select min-2 option";
+            }
+
+          else if (selectedCheckboxes.length > 5) {
+                document.getElementById("errormessage").innerHTML = "select max-5 option ";
+                }
+
+                else {
+                    document.getElementById("errormessage").innerHTML = "";
+
+                    alert("from sumit succesfully...!")
+
+                    document.getElementById("formsdata").submit();
+                }
+            }
+
+        
+
+    </script>
+
+</body>
+
+</html>

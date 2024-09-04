@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    
+    <h2>36.	DOB Validation check the user input to get age of above 18 and below 30 is valid</h2>
+
+    <div class="form-section">
+        <label for="start_date">Start Day & Time:</label>
+        <input type="date" id="start_date" name="start_date">
+        <p id="date1" style="color: orangered;"></p>
+        <p id="date2" style="color: blueviolet;"></p>
+        <p id="date3" style="color: chartreuse;"></p>
+        <button onclick="dateconfirm()">submit</button>
+
+    </div>
+
+
+    <script>
+
+        function calculateAge(dateOfBirth) {
+
+            const today = new Date();
+            const birthDate = new Date(dateOfBirth);
+            let age = today.getFullYear() - birthDate.getFullYear();
+            const monthDifference = today.getMonth() - birthDate.getMonth();
+
+            if (monthDifference < 0 || (monthDifference == 0 && today.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            return age;
+        }
+
+        function dateconfirm() {
+
+            let date = document.getElementById("start_date").value;
+            document.getElementById("date1").innerHTML = ""; 
+            document.getElementById("date2").innerHTML = "";
+            document.getElementById("date3").innerHTML = "";
+
+            if (date) {
+                const age = calculateAge(date);
+            if (age >= 18 && age <=30) {
+               document.getElementById("date2").innerHTML = "Age between 18 and 30 is valid....!";
+            }
+            else {
+                document.getElementById("date1").innerHTML = "get age of above 18 and below 30 is valid..!";
+            }
+        }
+            else {
+                document.getElementById("date3").innerHTML = "choose the date plesae...!";
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>
+      
+
+

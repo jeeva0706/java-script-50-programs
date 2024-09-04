@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>29.	JavaScript Program to Encode a String to Base64</h2>
+
+        <p id="demo"></p>
+
+        <input type="text" id="code">
+
+        <button onclick="myencode()">submit</button>
+
+        <script>
+
+           function myencode(){
+            
+            const text1 = document.getElementById("code").value;
+
+            const text12 = btoa(text1);
+
+            document.getElementById("demo"). innerHTML = text12;
+           }
+
+
+        </script>
+
+</body>
+</html>

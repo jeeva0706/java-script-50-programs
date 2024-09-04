@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>37.	Disable previous dates and dates after 10days when showing Date picker</h2>
+
+    <div class="form-section">
+        <label for="start_date">Start Day & Time:</label>
+        <input type="date" id="start_date" name="start_date">
+        <p id="date1"></p>
+    </div>
+
+    <script>
+
+        
+        const today = new Date().toISOString().split('T')[0];
+
+        
+        const maxDate = new Date();
+        maxDate.setDate(maxDate.getDate() + 10);
+        const maxDateString = maxDate.toISOString().split('T')[0];
+
+        
+        document.getElementById('start_date').setAttribute('min', today);
+        document.getElementById('start_date').setAttribute('max', maxDateString);
+
+    </script>
+
+</body>
+
+</html>

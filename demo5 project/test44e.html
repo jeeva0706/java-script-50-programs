@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>Problem-4:  Get the total count of number list in the dictionary which is multiple of [1,2,3,4,5,6,7,8,9]
+    (examples)
+    input: [1,2,8,9,12,46,76,82,15,20,30]
+    Output:
+        {1: 11, 2: 8, 3: 4, 4: 4, 5: 3, 6: 2, 7: 0, 8: 1, 9: 1}
+</h2>
+
+<script>
+
+function countMultiples(arr) {
+    const multiples = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+    const result = {};
+
+    // Initialize the result dictionary with 0 counts
+    multiples.forEach(multiple => {
+        result[multiple] = 0;
+    });
+
+    // Count the multiples for each number in the input array
+    arr.forEach(num => {
+        multiples.forEach(multiple => {
+            if (num % multiple == 0) {
+                result[multiple]++;
+            }
+        });
+    });
+
+    return result;
+}
+
+
+const input = [1, 2, 8, 9, 12, 46, 76, 82, 15, 20, 30];
+const output = countMultiples(input);
+console.table(output);
+
+
+</script>
+
+</body>
+</html>

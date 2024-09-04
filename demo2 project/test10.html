@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h2>10.	JavaScript Program to Check Leap Year JavaScript Program to Format the Date (dd/mm/yyyy) </h2>
+
+    <script>
+
+
+        function checkLeapYear(year) {
+            if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+                return `${year} is a leap year.`;
+            } else {
+                return `${year} is not a leap year.`;
+            }
+        }
+
+        // Example usage:
+        const year = (prompt("enter the year:"));
+        document.write(checkLeapYear(year));
+
+
+
+    </script>
+
+</body>
+
+</html>

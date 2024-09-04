@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>40.	input: AYZ output: ?</h2>
+
+    <script>
+
+        function changedata(input) {
+            return input
+                .split('')
+                .reverse()
+                .map(char => String.fromCharCode(char.charCodeAt(0) + 1)) 
+                .join()
+        }
+
+        let input ="AYZ";
+        let result = changedata(input);
+        document.write(result);
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <h3>center value</h3>
+    <p id="demo3"></p>
+
+    <script>
+
+        const arr = [1, 5, 343, 44, 23, 865, 34]
+        document.getElementById("demo1").innerHTML = arr;
+
+        arr.sort()
+        document.getElementById("demo2").innerHTML = arr;
+
+        document.getElementById("demo3").innerHTML = arr[4];
+
+
+    </script>
+
+</body>
+
+</html>

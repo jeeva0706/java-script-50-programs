@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State and District Dropdown</title>
+</head>
+
+<body>
+
+    <h2>32.	Write a javascript code for show dropdown list, when a country is choosen show the matching cities in next dropdown</h2>
+
+    <div class="form-section">
+        <label for="state">Select your state:</label>
+        <select name="state" class="froms" id="state" onchange="showDistricts()">
+            <option value="">Select your state</option>
+            <option value="kerala">Kerala</option>
+            <option value="tamilnadu">Tamilnadu</option>
+            <option value="karnataka">Karnataka</option>
+        </select>
+        <p id="demo1"></p>
+    </div>
+
+    <div class="form-section1">
+        <label for="district">Select your district:</label>
+        <select name="district" class="froms1" id="district">
+            <option value="">Select your district</option>
+        </select>
+        <p id="demo2"></p>
+    </div>
+
+    <script>
+        const districts = {
+            kerala: ["Palakadu", "Kochin", "Thirisur"],
+            tamilnadu: ["Salem", "Covai", "Erode"],
+            karnataka: ["Bangaluru", "Mysuru", "Koppal"]
+        };
+
+        function showDistricts() {
+            const stateSelect = document.getElementById("state");
+            const districtSelect = document.getElementById("district");
+            const selectedState = stateSelect.value;
+
+            
+            districtSelect.innerHTML = '<option value="">Select your district</option>';
+
+            const stateDistricts = districts[selectedState] || [];
+
+            
+            for (let i = 0; i < stateDistricts.length; i++) {
+                const option = document.createElement("option");
+                option.value = stateDistricts[i];
+                option.text = stateDistricts[i];
+                districtSelect.add(option);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

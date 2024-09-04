@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove method</title>
+</head>
+
+<body>
+
+    <p id="demo1"></p>
+
+    <h2>4. write a code to show unique values from an array (or remove duplicates), </h2>
+    <script>
+
+        const arr = [1, 2, 3, 4, 5, 4, 6, 6, 7, 8, 9, 10];
+        const unique = [...new Set(arr)];
+
+        document.getElementById("demo1").innerHTML = unique;
+
+
+
+    </script>
+
+
+</body>
+
+</html>

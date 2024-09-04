@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <h2>4.	Write a code to combine two arrays, to show unique values, then sort the array and find the center value, then +2 on each value from center value</h2>
+
+
+    <script>
+
+        // const arr1 = [1,2,3,4,3,5,6,2,8];
+        // const arr2 = [3,5,9,10,4,5,7,8,1];
+
+        // const arr=arr1.concat(arr2)
+
+        // document.getElementById("demo1").innerHTML = arr;
+
+        // const unqiue = [...new Set(arr)];
+
+        // document.getElementById("demo2").innerHTML = unqiue;
+
+        // arr.sort();
+
+        // document.getElementById("demo3").innerHTML = arr;
+
+
+        const arr1 = [1, 2, 3, 4, 3, 5, 6, 2, 8];
+
+        const arr2 = [3, 5, 9, 10, 4, 5, 7, 8, 1];
+
+
+        const arr = arr1.concat(arr2);
+
+
+        const unique = [...new Set(arr)];
+
+
+        unique.sort((a, b) => a - b);
+
+
+        document.getElementById("demo1").innerHTML = unique;
+
+
+        const centerIndex = Math.floor(unique.length / 2);
+        const centerValue = unique[centerIndex];
+
+
+        for (let i = centerIndex; i < unique.length; i++) {
+            unique[i] += 2;
+        }
+
+
+        document.getElementById("demo2").innerHTML = unique;
+
+
+        document.getElementById("demo3").innerHTML = `Center Value: ${centerValue}`;
+
+
+    </script>
+
+</body>
+
+</html>

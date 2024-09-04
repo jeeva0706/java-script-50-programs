@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<h2> input a = 2, then output : 1, 3</h2>
+
+<body>
+
+    <script>
+
+        function myfunction1(v) {
+            let result1 = [];
+            for (i = 0; i < v; i++) {
+                result1.push(2 * i + 1);
+            }
+            return result1;
+        }
+
+
+        let input1 = 2;
+        let output1 = myfunction1(input1);
+        document.write(output1 + "<br>");
+        
+
+    </script>
+
+</body>
+
+</html>

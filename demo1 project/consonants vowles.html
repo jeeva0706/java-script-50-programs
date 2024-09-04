@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>write a code for Rupees denomination for user input value [1,2,5,10,20,50,100,200,500,2000]</h3>
+
+    <p id="demo1"></p>
+
+    <script>
+
+        function mydatas(word) {
+            let vowels = 'aeiouAEIOU';
+            let numVowels = 0;
+            let numConsonants = 0;
+
+
+            for (let char of word) {
+                if (vowels.includes(char)) {
+                    numVowels++;
+                } else if (char.match(/[a-zA-Z]/)) {
+                    numConsonants++;
+                }
+            }
+
+            return {
+                vowels: numVowels,
+                consonants: numConsonants
+            };
+        }
+
+
+        let word = prompt("Enter a word:");
+        let counts = mydatas(word);
+
+        console.log(`Number of vowels: ${counts.vowels}`);
+        console.log(`Number of consonants: ${counts.consonants}`);
+
+
+    </script>
+
+</body>
+
+</html>

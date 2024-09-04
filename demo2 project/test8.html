@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="demo"></p>
+
+    <h2 style="color: red;">Closure Tecnic</h2>
+
+    <h3>8.	Write a closure program and access the data from a function using closure</h3>
+
+    <script>
+
+        let counter = 0;
+
+    function add()
+    {
+       counter += 1; 
+
+    }
+
+    add()
+    add()
+    add()
+
+    document.getElementById("demo").innerHTML = "count of counter:" + counter;  
+
+    </script>
+
+</body>
+</html>
